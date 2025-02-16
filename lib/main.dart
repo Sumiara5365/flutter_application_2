@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 void main() {
   runApp(MyApp());
@@ -46,21 +47,12 @@ class _StarRatingPageState extends State<StarRatingPage> {
       appBar: AppBar(
         title: Text('Star Rating'),
       ),
-      body: Row(
-        children:[
-          Icon(
-            size:70,
-            Iconsax.activity4,
-            color: Colors.blue,
-          )
-        Text(
-         "This is a",
-         style: TextStyle( color: Colors.amber,
-         fontSize: 60,
-         )
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: List.generate(5, (index) => _buildStar(index)),
         ),
       ),
     );
   }
 }
-
